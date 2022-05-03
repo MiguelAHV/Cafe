@@ -5,9 +5,7 @@ const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 
-// Imagenes
 
-const imagemin = require( "gulp-imagemin");
 
 function css( done ) {
     // compilar
@@ -24,7 +22,6 @@ function css( done ) {
 
 function imagenes ( done ) {
     src("src/img/**/*")
-        .pipe( imagemin({ optimizationLevel: 3 }) )
         .pipe( dest("build/img") );
 
     done();

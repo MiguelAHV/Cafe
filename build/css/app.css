@@ -366,6 +366,7 @@ p {
 
 a {
   text-decoration: none;
+  color: #000000;
 }
 
 img {
@@ -659,7 +660,7 @@ h3 {
   background-repeat: no-repeat;
   background-position: center 5rem, center 92%, 100%;
   background-size: 200%;
-  padding: 15rem 5rem 20rem 5rem;
+  padding: 15rem 2rem 20rem 2rem;
 }
 @media (min-width: 768px) {
   .nuestro-menu {
@@ -671,4 +672,102 @@ h3 {
   .nuestro-menu {
     background-size: 60%, 60%, 100%;
   }
+}
+
+@media (min-width: 768px) {
+  .grid-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+
+.menu h3 {
+  color: #ffffff;
+}
+.menu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu li p {
+  color: #ffffff;
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin: 0 0 3rem 0;
+}
+.menu li p span {
+  color: #C39C63;
+  display: block;
+}
+.menu li .precio {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.nuestros-testimoniales {
+  padding: 10rem 2rem;
+  background-color: #ffffff;
+}
+@media (min-width: 768px) {
+  .nuestros-testimoniales {
+    padding: 10rem;
+    margin-top: -10rem;
+  }
+}
+.nuestros-testimoniales .testimonial {
+  background-color: #EBE7DE;
+  padding: 2rem 4rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+.nuestros-testimoniales .autor {
+  text-align: right;
+  font-size: 2.4rem;
+  color: #5E311E;
+  font-family: "Bona Nova", serif;
+}
+
+.footer {
+  background-color: #5E311E;
+}
+.footer .contenido-footer {
+  padding: 5rem;
+  background-color: #ffffff;
+}
+@media (min-width: 768px) {
+  .footer .contenido-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.footer-box {
+  font-family: "Bona Nova", serif;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .footer-box {
+    margin-bottom: 0;
+  }
+}
+.footer-box h3 {
+  font-family: "Bona Nova", serif;
+  margin: 0 0 1rem 0;
+  font-size: 2.4rem;
+  color: #C39C63;
+}
+.footer-box p, .footer-box a {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.copyright {
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+  color: #ffffff;
 }

@@ -7,13 +7,14 @@ const autoprefixer = require("autoprefixer");
 
 
 
+
 function css( done ) {
     // compilar
     // pasos: 1- identificar archivo, 2- compilarla, 3- guardar el css
 
     src("src/scss/app.scss")
         .pipe( sass() )
-        .pipe( postcss( [autoprefixer() ] ) )
+        .pipe( postcss( [autoprefixer(), ] ) )
         .pipe( dest("build/css") )
 
 

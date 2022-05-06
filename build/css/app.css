@@ -436,6 +436,8 @@ h3 {
 .header {
   padding: 5rem 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 60rem;
 }
 @media (min-width: 480px) {
@@ -482,6 +484,26 @@ h3 {
   background-image: url(../../../build/img/header_inicio.jpg);
 }
 
+.header-nosotros {
+  background-image: url(../../../build/img/header_nosotros.jpg);
+}
+
+.header-proceso {
+  background-image: url(../../../build/img/header_proceso.jpg);
+}
+
+.header-menu {
+  background-image: url(../../../build/img/header_menu.jpg);
+}
+
+.header-galeria {
+  background-image: url(../../../build/img/header_galeria.jpg);
+}
+
+.header-contacto {
+  background-image: url(../../../build/img/header_contacto.jpg);
+}
+
 .nav-principal {
   display: flex;
   flex-direction: column;
@@ -514,6 +536,9 @@ h3 {
   }
 }
 .nav-principal a:hover {
+  color: #C39C63;
+}
+.nav-principal a.activo {
   color: #C39C63;
 }
 
@@ -770,4 +795,141 @@ h3 {
   margin: 0;
   padding: 2rem;
   color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
+}
+.contenido-nosotros .imagen {
+  margin-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .contenido-nosotros .imagen {
+    margin: 0 1rem 0 0;
+  }
+}
+.contenido-nosotros .imagen img {
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  border: 2rem solid #ffffff;
+  box-shadow: 9px 10px 5px -7px rgba(0, 0, 0, 0.35);
+}
+.contenido-nosotros .texto blockquote {
+  margin: 0;
+  padding: 1rem;
+  border-left: 0.5rem solid #5E311E;
+  font-size: 2rem;
+}
+
+.proceso-cafe {
+  margin-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .proceso-cafe {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+  }
+}
+.proceso-cafe:last-of-type {
+  margin-bottom: 0;
+}
+.proceso-cafe:nth-child(odd) .texto {
+  order: -1;
+}
+.proceso-cafe .imagen,
+.proceso-cafe .texto {
+  flex: 1;
+}
+.proceso-cafe .texto {
+  margin-top: 1rem;
+}
+.proceso-cafe .texto h3 {
+  margin: 0;
+  text-align: left;
+  color: #5E311E;
+}
+.proceso-cafe .texto h3::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 4px;
+  background-color: #C39C63;
+}
+.proceso-cafe .texto p {
+  text-align: justify;
+}
+
+.menu-principal {
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .contenido-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+.contenido-menu p {
+  padding: 2rem;
+  text-align: justify;
+  line-height: 1.5;
+}
+@media (min-width: 1024px) {
+  .contenido-menu p {
+    font-size: 2rem;
+    line-height: 2;
+    font-weight: 500;
+    padding: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contenido-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    background-image: url(../../../build/img/granos_cafe.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 40%;
+  }
+}
+
+.formulario .campo {
+  margin-bottom: 2rem;
+}
+.formulario .campo :last-of-type {
+  margin-bottom: 0;
+}
+.formulario .campo label {
+  text-transform: uppercase;
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.formulario .campo input:not([type=submit]),
+.formulario .campo select {
+  width: 100%;
+  padding: 1rem;
+  border: 0.5rem solid #5E311E;
+}
+.formulario .campo input[type=submit] {
+  background-color: #5E311E;
+  width: 100%;
+  padding: 1rem;
+  color: #ffffff;
+  border: none;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.formulario .campo input[type=submit]:hover {
+  cursor: pointer;
 }
